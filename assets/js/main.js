@@ -6,29 +6,6 @@
 
 (function($) {
 
-	skel.breakpoints({
-		xlarge: '(max-width: 1680px)',
-		large: '(max-width: 1280px)',
-		medium: '(max-width: 980px)',
-		small: '(max-width: 736px)',
-		xsmall: '(max-width: 480px)',
-		xxsmall: '(max-width: 360px)'
-	});
-
-
-	var folder = "/images/times/";
-
-	$.ajax({
-		url : folder,
-		success: function (data) {
-			$(data).find("a").attr("href", function (i, val) {
-				if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-					$(".times-list").append( "<img class='time-item' src='"+ folder + val +"'>" );
-				} 
-			});
-		}
-	});
-
 	/**
 	 * Applies parallax scrolling to an element's background image.
 	 * @return {jQuery} jQuery object.
@@ -363,6 +340,28 @@
 
 	});
 
+	skel.breakpoints({
+		xlarge: '(max-width: 1680px)',
+		large: '(max-width: 1280px)',
+		medium: '(max-width: 980px)',
+		small: '(max-width: 736px)',
+		xsmall: '(max-width: 480px)',
+		xxsmall: '(max-width: 360px)'
+	});
+
+
+	var folder = "/images/times/";
+
+	$.ajax({
+		url : folder,
+		success: function (data) {
+			$(data).find("a").attr("href", function (i, val) {
+				if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+					$(".times-list").append( "<img class='time-item' src='"+ folder + val +"'>" );
+				} 
+			});
+		}
+	});
 
 
 })(jQuery);
