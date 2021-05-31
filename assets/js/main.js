@@ -357,8 +357,9 @@
 		success: function (data) {
 			$(data).find("a").attr("href", function (i, val) {
 				if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-					$(".times-list").append( "<img class='time-item' src='" + val +"'>" );
+					$(".times-list").append( "<img class='time-item' src='" +  val +"'>" );
 				} 
+				console.log(folder, val)
 			});
 		}
 	});
