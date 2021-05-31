@@ -350,14 +350,14 @@
 	});
 
 
-	var folder = "/images/times/";
+	var folder = "/images/times";
 
 	$.ajax({
 		url : folder,
 		success: function (data) {
 			$(data).find("a").attr("href", function (i, val) {
 				if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-					$(".times-list").append( "<img class='time-item' src='"+ folder + val +"'>" );
+					$(".times-list").append( "<img class='time-item' src='" + val +"'>" );
 				} 
 			});
 		}
