@@ -4149,7 +4149,7 @@
 
 		#times-participantes .times-list .time-item{
 			width: 100px;
-			height: fit-content;
+			height: auto;
 			margin: 24px;
 	
 		}
